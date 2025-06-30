@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-header">
+            <h1>Project Request Form</h1>
+            <p>Please fill out the form below to request a project.</p>
+        </div>
+        
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+        
+        <div class="conversation-area" id="conversationArea">
+            <!-- Messages will be dynamically added here -->
+        </div>
+        
+        <div class="typing-indicator" id="typingIndicator">
+            <div class="ai-avatar">AI</div>
+            <div class="message-content">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <span>Thinking</span>
+                    <div class="typing-dots">
+                        <div class="typing-dot"></div>
+                        <div class="typing-dot"></div>
+                        <div class="typing-dot"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="input-area">
+            <div class="current-question" id="currentQuestion">
+                <div class="question-text" id="questionText"></div>
+                <div class="answer-input">
+                    <input type="text" id="answerInput" placeholder="Type your answer...">
+                    <button class="submit-btn" id="submitAnswer">Send</button>
+                </div>
+            </div>
+            
+            <div class="form-summary" id="formSummary">
+                <div class="summary-title">Form Complete! Here's what you shared:</div>
+                <div id="summaryContent"></div>
+            </div>
+        </div>
+    </div>
+    <script src="config.js"></script> // Webhook
+    <script src="script.js"></script>
+
+</body>
+</html>
